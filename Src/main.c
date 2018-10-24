@@ -135,7 +135,7 @@ int main(void)
 			SetGPOtoDefault();
 			MX_IWDG_Refresh();
 			
-			HAL_Delay(5000);			// Wait 2 seconds
+			HAL_Delay(5000);			// Wait 5 seconds
 		}
 		else
 		{
@@ -162,8 +162,10 @@ int main(void)
 			{
 				state_status = RunStateIteration(rx_buf, &tstateMachine, &tremote); 
 				
-//				HAL_TIM_Base_Stop(&htim21);			// stop timeout
-//				HAL_TIM_Base_Start_IT(&htim21);	// activete timeout to check whether the next uart msg will received in time 
+				HAL_TIM_Base_Stop(&htim21);			// stop timeout
+				tim_1s = 0;											// reset timeout flag
+				__HAL_TIM_SetCounter(&htim21, 1000);	// set counter value to start
+				HAL_TIM_Base_Start_IT(&htim21);	// activete timeout to check whether the next uart msg will received in time 
 				
 				Uart_receive = 0;			// reset Uart receive flag
 			}

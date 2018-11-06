@@ -128,9 +128,9 @@ int main(void)
 		
 		if((GetBatWarn() 	==	GPIO_PIN_RESET)	|| 
 			(GetOilWarn() 	==	GPIO_PIN_RESET)	|| 
-			(GetTempWarn() 	== 	GPIO_PIN_RESET)	||			// check whether an Error from Engine is available
+			(GetTempWarn() 	== 	GPIO_PIN_RESET)	)/*||			// check whether an Error from Engine is available
 			(GetOutError() 	==	GPIO_PIN_RESET)	||			// check whether an Error from Remote Power is available
-			(GetFault()		==	GPIO_PIN_RESET))					// check whether an Error from Output Driver is available
+			(GetFault()		==	GPIO_PIN_RESET))					// check whether an Error from Output Driver is available */
 		{
 			SetGPOtoDefault();
 			MX_IWDG_Refresh();
@@ -139,7 +139,7 @@ int main(void)
 		}
 		else
 		{
-			EnableRemote();
+//			EnableRemote(); // defect
 			
 //			adc_volt = get_Voltage();
 			

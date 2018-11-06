@@ -262,7 +262,8 @@ void SetHalt(TRemote *tremote)
 {
 	HAL_GPIO_WritePin(IGN_GPIO_Port, IGN_Pin, GPIO_PIN_SET); 				// ativate IGN Output
 	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);				// turn LED 2 on
-	HAL_GPIO_WritePin(EN_OUT_GPIO_Port, EN_OUT_Pin, GPIO_PIN_SET);	// Enable Outputs
+//	HAL_GPIO_WritePin(EN_OUT_GPIO_Port, EN_OUT_Pin, GPIO_PIN_SET);	// Enable Outputs
+	HAL_GPIO_WritePin(EN_OUT_GPIO_Port, EN_OUT_Pin, GPIO_PIN_RESET);// Disable Outputs // defect
 
 	HAL_GPIO_WritePin(INP_1_GPIO_Port, INP_1_Pin, GPIO_PIN_RESET); 	// 
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_RESET); 	//

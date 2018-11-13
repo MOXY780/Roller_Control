@@ -119,9 +119,10 @@
 #define HALT			0x09
 
 #define JOYSTICK	0x0F
-#define NORMAL		0x1F
+#define VIBR_ALWAYS	0x10
+#define NORMAL		0xCF
 #define VIBR			0x20
-#define SLOW			0x3F
+#define SLOW			0xBF
 #define FAST			0x40
 #define OFF				0x7F
 #define ON				0x80

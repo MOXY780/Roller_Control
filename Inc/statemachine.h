@@ -58,6 +58,7 @@ typedef enum {
 typedef enum {
 		B_NORMAL = 0x00U,
 		B_VIBR   = 0x01U,
+		B_VIBR_ALWAYS	= 0x02U,
 } TButtonVibr;
 
 typedef struct {

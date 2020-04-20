@@ -260,7 +260,7 @@ void SetOff(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_6_GPIO_Port, INP_6_Pin, GPIO_PIN_RESET); 	//	vibration 1 off
 	HAL_GPIO_WritePin(INP_7_GPIO_Port, INP_7_Pin, GPIO_PIN_RESET); 	//	stop fast mode
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_RESET); 	//	hydraulic off
+	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_RESET); 	//	stop slow mode
 }
 
 /*---------------------------------------------------------------------------*/
@@ -282,7 +282,6 @@ void SetHalt(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_RESET); 	//	x	x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
 
 	SetDrivespeed(tremote);
 	SetVibrMode(tremote);
@@ -304,9 +303,8 @@ void SetForw(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_SET); 		//	^ x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_RESET); 	//	x	x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
 	
-	SetDrivespeed(tremote);
+	//SetDrivespeed(tremote);
 	SetVibrMode(tremote);
 }
 
@@ -326,9 +324,8 @@ void SetForwright(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_SET); 		//	^ x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_RESET); 	//	x	x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
 	
-	SetDrivespeed(tremote);
+	//SetDrivespeed(tremote);
 	SetVibrMode(tremote);
 }
 
@@ -348,9 +345,8 @@ void SetRight(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_SET); 		//	^ x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_SET); 		//	x v
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_RESET); 	//	x	x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
 	
-	SetDrivespeed(tremote);
+	//SetDrivespeed(tremote);
 	SetVibrMode(tremote);
 }
 
@@ -370,9 +366,8 @@ void SetBackright(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_SET); 		//	v x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
 	
-	SetDrivespeed(tremote);
+	//SetDrivespeed(tremote);
 	SetVibrMode(tremote);
 }
 
@@ -392,9 +387,8 @@ void SetBack(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_SET); 		//	x v
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_SET); 		//	v x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
 	
-	SetDrivespeed(tremote);
+	//SetDrivespeed(tremote);
 	SetVibrMode(tremote);
 }
 
@@ -414,9 +408,8 @@ void SetBackleft(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_SET); 		//	x v
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_RESET); 	//	x	x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
 	
-	SetDrivespeed(tremote);
+	//SetDrivespeed(tremote);
 	SetVibrMode(tremote);
 }
 
@@ -436,9 +429,8 @@ void SetLeft(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_SET); 		//	v x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
 	
-	SetDrivespeed(tremote);
+	//SetDrivespeed(tremote);
 	SetVibrMode(tremote);
 }
 
@@ -458,9 +450,8 @@ void SetForwleft(TRemote *tremote)
 	HAL_GPIO_WritePin(INP_2_GPIO_Port, INP_2_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_4_GPIO_Port, INP_4_Pin, GPIO_PIN_RESET); 	//	x	x
 	HAL_GPIO_WritePin(INP_5_GPIO_Port, INP_5_Pin, GPIO_PIN_RESET); 	//	x	x
-	HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic on
-	
-	SetDrivespeed(tremote);
+		
+	//SetDrivespeed(tremote);
 	SetVibrMode(tremote);
 }
 
@@ -505,10 +496,19 @@ void SetVibrMode(TRemote *tremote)
 /*---------------------------------------------------------------------------*/
 void SetDrivespeed(TRemote *tremote)
 {
-	if(tremote->Drivespeed == B_SLOW)
-		HAL_GPIO_WritePin(INP_7_GPIO_Port, INP_7_Pin, GPIO_PIN_RESET);
-	else
-		HAL_GPIO_WritePin(INP_7_GPIO_Port, INP_7_Pin, GPIO_PIN_SET);
+	if(tremote->Joystick == ST_HALT && tremote->Drivemode == B_NORMAL)
+	{
+		if(tremote->Drivespeed == B_SLOW)
+		{
+			HAL_GPIO_WritePin(INP_7_GPIO_Port, INP_7_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_SET); 		//	hydraulic slow
+		}
+		else
+		{ 		
+			HAL_GPIO_WritePin(INP_7_GPIO_Port, INP_7_Pin, GPIO_PIN_SET);		//	hydraulic fast
+			HAL_GPIO_WritePin(INP_8_GPIO_Port, INP_8_Pin, GPIO_PIN_RESET);
+		}
+	}
 }
 
 /*---------------------------------------------------------------------------*/
